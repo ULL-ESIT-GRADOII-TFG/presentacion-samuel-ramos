@@ -257,19 +257,53 @@ Juan José Labrador González
     \item Soporta preguntas de programación (código en {\bfseries Ruby}).
     \item Almacenamiento del cuestionario, respuestas y notas de los alumnos en {\bfseries Google Drive}.
   \end{itemize}
-  \framebreak
-  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \end{frame}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
 \section{Conclusiones/Conclusions}
-\begin{frame}
+\begin{frame}[allowframebreaks]
   \frametitle{Conclusiones/Conclusions}
-%   \item Esta herramienta pretende ser un complemento para este tipo de plataformas y ofreciendo una solución innovadora para el almacenamiento de los 
-%     datos de los exámenes: {\bfseries Google Drive}.
-%   
-%     \item Por otra parte, considerando aspectos éticos y de seguridad, se hace uso de {\bfseries OAuth} para la autentificación de usuarios con el fin de evitar
-%     posibles problemas de phishing y exposición de datos sensibles a terceras personas.
+  
+  \begin{itemize}
+    \item Esta herramienta pretende ser un complemento para plataformas como Moodle al ofrecer la posibilidad de
+    especificar preguntas de programación.
+    \item Ofrece una solución innovadora para el almacenamiento de los datos de los exámenes: {\bfseries Google Drive}.
+    Permite gestionar de forma más cómoda los datos generados en lugar de usar bases de datos.
+    \item Por otra parte, considerando aspectos éticos y de seguridad, se hace uso de {\bfseries OAuth} para la autentificación de usuarios con el fin de evitar
+    posibles problemas de phishing y exposición de datos sensibles a terceras personas.
+  \end{itemize}
+  \framebreak
+  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+  El trabajo realizado hasta la fecha puede ser el punto de partida para otro Trabajo de Fin de Grado, por lo que
+  las principales líneas de desarrollo a continuar serían:
+  \begin{itemize}
+    \item Resolver los problemas de seguridad relacionados con evaluar el código escrito de los alumnos.
+    \item Dar soporte a preguntas con respuestas de código en otros lenguajes de programación.
+    \item Ofrecer una alternativa de despliegue distinta a Heroku.
+    \item Escribir \textit{renderers} para dar soporte a otros formatos usados por plataformas educativas (Ej: MoodleXML, Gift, etc.).
+  \end{itemize}
+  \framebreak
+  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+  \begin{itemize}
+    \item This tool pretends to be a complement to platforms like Moodle offering the possibility of specify programming questions.
+    \item Provides an innovation solution for the storage of exams data: {\bfseries Google Drive}.
+    It allows an easier management of the information instead using databases.
+    \item On the other hand, keeping in mind ethic and legal topics, we use {\bfseries OAuth} to delegate the authentication to Google. 
+    This way, we avoid security bugs as the phishing or the exposure of sensitive information to third people.
+  \end{itemize}
+  \framebreak
+  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+  The tool in its current state could be the starting point for another Final Degree Project.
+  Therefore, the main develop lines to continue are the following:
+  \begin{itemize}
+    \item Solve the security problem related with the student code evaluation in the server.
+    \item Provide support to questions with answers written in other programming languages.
+    \item Provide a deployment alternative different to Heroku.
+    \item To write renderers giving support to other formats (MoodleXML, Gift, etc.) used by a variety of learning platforms.
+  \end{itemize}
 \end{frame}
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
@@ -282,190 +316,4 @@ Juan José Labrador González
   \nocite{*}
 \end{frame}
 
-% 
-% \section{Contexto}
-% 
-% 
-% %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
-% \begin{frame}
-% 
-% \frametitle{Contexto}
-% %
-% 
-% \begin{enumerate}[<+->]
-% \item 
-% Tercer curso del Grado en Ingeniería Informática
-% \item 6 créditos: 3 de Teoría 1,5 de problemas y 1,5 de prácticas de laboratorio
-% \item 
-% El número de alumnos matriculados supera los ciento sesenta
-% \item 
-% Se dividen en dos grupos para las tres horas de teoría y problemas (mañana y tarde)
-% \item 
-% Se dividen en siete grupos para la hora de prácticas de laboratorio
-% \item 
-% Cuatro profesores
-% \item Dos a cargo de los
-% respectivos grupos de teoría y el resto compartiendo horas de laboratorio
-% \end{enumerate}
-% 
-% \end{frame}
-% %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
-% 
-% \section{Competencias Transversales: Trabajo en Equipo}
-% 
-% \begin{frame}
-% \frametitle{Competencias}
-% %\includegraphics[width=1.0\textwidth]{img/paradigm-shift-cartoon.eps}
-% \begin{itemize}
-% \item
-% \pause
-% T10. Capacidad de integrarse rápidamente y {\color{blue} trabajar} eficientemente y rápidamente {\color{blue} en equipo} \ldots % Capacidad de integrarse rápidamente y {\color{blue} trabajar eficientemente en equipo}s unidisciplinares y de colaborar en un entorno multidisciplinar.
-% \pause
-% \item T12. Capacidad de {\color{blue} relación interpersonal} %Capacidad de {\color{blue} relación interpersonal}.
-% \pause
-% \item T16. Capacidad de {\color{blue} planificación y organización} del trabajo personal %Capacidad de {\color{planificación y organización} del trabajo personal.
-% \end{itemize}
-% 
-% \end{frame}
-% 
-% \section{Control de Versiones}
-% 
-% \begin{frame}
-% \frametitle{Control de Versiones}
-% \begin{center}
-% \includegraphics[width=1.0\textwidth]{img/versioncontrol1.eps}
-% \end{center}
-% \end{frame}
-% 
-% %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
-% \begin{frame}
-% \frametitle{Control de Versiones}
-% \begin{center}
-% {\it Se llama {\color{red} control de versiones} a la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración del mismo. 
-% 
-% Una {\color{blue} versión, revisión o edición de un producto}, es el estado en el que se encuentra el mismo en un momento dado de su desarrollo o modificación. }
-% \end{center}
-% \end{frame}
-% 
-% 
-% \begin{frame}
-% \frametitle{Control de Versiones: La Máquina del Tiempo}
-% \begin{center}
-% \includegraphics[width=1.0\textwidth]{img/timemachine.eps}
-% \end{center}
-% \end{frame}
-% 
-% \begin{frame}
-% \frametitle{Control de Versiones: Git}
-% \begin{center}
-% \includegraphics[width=0.5\textwidth]{img/quote-linus.eps}
-% 
-% \includegraphics[width=0.4\textwidth]{img/gitdefinition.eps}
-% \end{center}
-% 
-% \end{frame}
-% 
-% \begin{frame}
-% \frametitle{Ramas: Universos Paralelos}
-% \begin{center}
-% \includegraphics[width=1.0\textwidth]{img/version-control-branch.eps}
-% \end{center}
-% \end{frame}
-% 
-% \begin{frame}
-% \frametitle{Mezclando Universos Paralelos}
-% \begin{center}
-% \includegraphics[width=1.0\textwidth]{img/merge.eps}
-% \end{center}
-% \end{frame}
-% 
-% \section{Colaboración y Control de Versiones}
-% \begin{frame}
-% \frametitle{Colaboración y Git}
-% \begin{center}
-% \includegraphics[width=0.7\textwidth]{img/collaborating1.eps}
-% \end{center}
-% {\it 
-% Cada usuario modifica la copia local ({\color{red} working copy}) 
-% y cuando el usuario decide
-% {\color{blue} compartir los cambios} ({\color{red} push}) 
-% el sistema automáticamente intenta {\color{blue}combinar} ({\color{red} merge})
-% las diversas modificaciones. 
-% }
-% %------------------------------------------------------------------------------
-% \end{frame}
-% 
-% \begin{frame}
-% \frametitle{GitHub: Facebook para Programadores}
-% \begin{columns}
-%   \begin{column}{0.5\textwidth}
-%   \includegraphics[width=1.0\textwidth]{img/worldcollaboration.eps}
-%   \end{column}
-%   \begin{column}{0.5\textwidth}
-%   \begin{center}
-%   \includegraphics[width=0.8\textwidth]{img/github.eps}
-%   \end{center}
-%   \end{column}
-% \end{columns}
-% 
-% GitHub is home to {\color{red} over 13.1 million repositories}, making it the largest code host in the world.
-% \end{frame}
-% 
-% \begin{frame}
-% \frametitle{Incidencias/Issues}
-% \begin{center}
-% \includegraphics[width=1.0\textwidth]{img/githubissues.eps}
-% \end{center}
-% %------------------------------------------------------------------------------
-% \end{frame}
-% 
-% \section{Conflictos y Resolución de Conflictos}
-% 
-% 
-% \begin{frame}
-% \frametitle{Conflictos}
-% \begin{center}
-% \includegraphics[width=0.8\textwidth]{img/conflict-resolver.eps}
-% \end{center}
-% 
-% {\it 
-% El principal problema es la posible
-% aparición de {\color{blue} conflictos} que deban ser solucionados manualmente 
-% que resultan de
-% las posibles inconsistencias que surgen al modificar el mismo fichero
-% por varias personas no coordinadas. 
-% }
-% \end{frame}
-% %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
-% 
-% \section{Programación en Pareja (Pair Programming)}
-% \begin{frame}
-% \frametitle{Programación en Parejas}
-% \includegraphics[width=1.0\textwidth]{img/pair_programming_1.eps}
-% \end{frame}
-% %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
-% 
-% 
-% \section{Evaluación}
-% %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
-% \begin{frame}
-% \frametitle{Evaluación}
-% 
-% \begin{center}
-%     \includegraphics[width=0.6\textwidth]{img/ruqlsrc.eps}
-% 
-%     \includegraphics[width=0.5\textwidth]{img/ruqlbrowser.eps}
-% \end{center}
-% \end{frame}
-% 
-% \section{Conclusión: Control de Versiones para Todo y para Tod@s}
-% %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
-% \begin{frame}
-% \frametitle{Control de Versiones para Todo y para Tod@s}
-% 
-% \begin{center}
-%     \includegraphics[width=0.7\textwidth]{img/estacontribucion.eps}
-% \end{center}
-% \end{frame}
-% 
 \end{document}
