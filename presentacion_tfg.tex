@@ -82,12 +82,22 @@ Juan José Labrador González
   
   \begin{itemize}
     \item Fruto del estudio e investigación del estado del arte, se encontró un repositorio en GitHub con gema de {\bfseries Ruby} denominada 
-    \href{http://github.com/saasbook/ruql}{'Ruby-based Quiz Generator and DSL'} (RuQL), que implementaba un DSL para hacer cuestionarios 
-    para diversos formatos (\textit{edX}, \textit{AutoQCM} y \textit{HTML impreso} para completar a mano).
+    \href{http://github.com/saasbook/ruql}{'RuQL'}:
+    \begin{itemize}
+      \item Ruby-based Quiz Generator and DSL.
+      \item Implementaba un DSL para hacer cuestionarios en diversos formatos (\textit{renderers}):
+      \begin{enumerate}
+        \item \textit{edX}.
+        \item \textit{AutoQCM}.
+        \item \textit{HTML impreso} para completar a mano.
+      \end{enumerate}
+      \item Los tipos de preguntas soportados eran: 
+      \begin{itemize}
+        \item De completar.
+        \item De tipo test (respuesta única y multirrespuesta).
+      \end{itemize}
+    \end{itemize}
   \end{itemize}
-  \begin{center}
-    \includegraphics[width=0.2\textwidth]{img/octocat.eps}
-  \end{center}
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
@@ -118,8 +128,14 @@ Juan José Labrador González
   
   \begin{itemize}
     \item Existen numerosas plataformas que permiten realizar cuestionarios y calificar a los alumnos, como por ejemplo {\bfseries Moodle}.
+    \begin{center}
+      \includegraphics[width=0.35\textwidth]{img/moodle.eps}
+    \end{center}
     Sin embargo, no cuenta con la posibilidad de añadir preguntas propias de las ramas de \textit{Ingeniería}, como pueden ser aquellas
     cuyas respuestas son evaluadas por programas escritos por el profesor.
+    \framebreak
+    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    
     \item El uso de esta herramienta está principalmente orientada a un perfil de profesor concreto:
     \begin{itemize}
       \item Docente de alguna rama de Ingeniería.
@@ -139,6 +155,7 @@ Juan José Labrador González
     \item Revisión biliográfica y consulta del estado del arte.
     \item Extensión del DSL para la elaboración de cuestionarios de modo que permita:
     \begin{itemize}
+      \item Nuevos tipos de preguntas como, por ejemplo, de código.
       \item Generar cuestionarios autoevaluables para entrenamiento del alumnado en formato HTML.
       \item Generar una aplicación Web autocorrectora de cuestionarios.
     \end{itemize}
@@ -204,11 +221,22 @@ Juan José Labrador González
   \bigskip
   
   {\bfseries GitHub}:
-  \begin{itemize}
-    \item Control de versiones usando \textit{branching}.
-    \item Gestión de incidencias y mejoras usando \textit{issues}.
-    \item Contacto con Armando para los \textit{Pull Requests}.
-  \end{itemize}
+  \begin{columns}
+    % First column
+    \begin{column}{9cm}
+      \begin{itemize}
+        \item Control de versiones usando \textit{branching}.
+        \item Gestión de incidencias y mejoras usando \textit{issues}.
+        \item Contacto con Armando para los \textit{Pull Requests}.
+      \end{itemize}
+    \end{column}
+    % Second column
+    \begin{column}{4cm}
+      \begin{figure}
+        \includegraphics[width=0.7\textwidth]{img/octocat.eps}
+      \end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -226,7 +254,7 @@ Juan José Labrador González
     \item Añadido manejo de excepciones.
   \end{itemize}
   \framebreak
-  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
   {\bfseries Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
   \bigskip
@@ -234,15 +262,70 @@ Juan José Labrador González
   Se genera un fichero HTML que contiene un formulario web. Características destacadas:
   \begin{itemize}
     \item Validación por {\bfseries JavaScript}.
-    \item Soporta preguntas de programación (código JavaScript).
-    \item Permite respuestas de Drag and Drop.
+    \item {\bfseries Local Storage} de HTML5 para almacenar las respuestas introducidas.
+    \item Expresiones regulares más potentes usando \includegraphics[width=0.23\textwidth]{img/xregexp.eps}
+    \framebreak
+    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    \item Soporte a preguntas de completar código JavaScript.
+    \bigskip
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{img/fi_p.eps}
+    \end{center}
+    \bigskip
+    
     \item Soporta expresiones escritas en {\bfseries LaTeX} usando {\bfseries MathJax}.
-    \item Expresiones regulares más potentes usando {\bfseries XRegExp}.
-    \item {\bfseries Local Storage} para almacenar las respuestas introducidas.
-    \item Menú contextual mostrando las respuestas correctas.
+    \bigskip
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{img/latex.eps}
+    \end{center}
+    \framebreak
+    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    \item Soporte a preguntas de programación (código JavaScript).
+    \bigskip
+    \begin{center}
+      \includegraphics[width=0.9\textwidth]{img/programming.eps}
+    \end{center}
+    \framebreak
+    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    \item Soporte a preguntas de Drag and Drop.
+    \bigskip
+    \begin{columns}
+      % First column
+      \begin{column}{7cm}
+        \includegraphics[width=0.9\textwidth]{img/ddfi.eps}
+        \newline
+        \newline
+        \includegraphics[width=0.9\textwidth]{img/ddmc.eps}
+      \end{column}
+      % Second column
+      \begin{column}{5.5cm}
+        \includegraphics[width=1\textwidth]{img/ddsm.eps}
+      \end{column}
+    \end{columns}
+    \framebreak
+    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    \item Posibilidad de mostrar las respuestas correctas
+    \bigskip
+    \begin{itemize}
+      \item Mediante menú contextual:
+      \newline
+      \begin{center}
+        \includegraphics[width=0.5\textwidth]{img/show_answer.eps}
+      \end{center}
+      \item Mediante botones:
+      \newline
+      \begin{center}
+        \includegraphics[width=0.5\textwidth]{img/sm.eps}
+      \end{center}  
+    \end{itemize}
+    
   \end{itemize}
   \framebreak
-  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
   {\bfseries Aplicación correctora de exámenes: Sinatra renderer}
   \bigskip
