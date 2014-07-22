@@ -11,8 +11,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[Trabajo de Fin de Grado]{Sistemas y Tecnologías Web\\
 Aplicación para la elaboración y despliegue de cuestionarios}
-\author {
-Autor: Juan José Labrador González\\
+
+\author[Juan José Labrador González] {
+Autor: Juan José Labrador González \\
 Director: Casiano Rodríguez León
 }
 
@@ -53,13 +54,6 @@ Director: Casiano Rodríguez León
   \includegraphics[width=0.16\textwidth]{img/etsii.eps}
   \titlepage
 
-%  \begin{scriptsize}
-%    \begin{center}
-%     Escuela Técnica Superior de Ingeniería Informática\\
-%     Universidad de La Laguna
-%    \end{center}
-%  \end{scriptsize}
-
 \end{frame}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
@@ -87,9 +81,9 @@ Director: Casiano Rodríguez León
     \href{http://github.com/saasbook/ruql}{'RuQL'}:
     \begin{itemize}
       \item RuQL: Ruby-based Quiz Generator and DSL.
-      \item Implementaba un DSL para hacer cuestionarios en diversos formatos (\textit{renderers}):
+      \item Implementaba un DSL para hacer cuestionarios en diversos formatos usando diversos \textit{renderers}:
       \begin{enumerate}
-        \item \textit{edX}.
+        \item \textit{EdX}.
         \item \textit{AutoQCM}.
         \item \textit{HTML impreso} para completar a mano.
       \end{enumerate}
@@ -103,14 +97,14 @@ Director: Casiano Rodríguez León
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-      \begin{itemize}
-        \item El creador de esta gema es \href{http://www.armandofox.com/geek}{{\bfseries Armando Fox}}, profesor del 
-        \href{http://www.cs.berkeley.edu/}{Departamento de Ingeniería Informática y Eléctrica} de la 
-        \href{http://www.berkeley.edu/}{{\bfseries Universidad de Berkeley}}, California (EEUU).
-      \end{itemize}
+  \begin{itemize}
+    \item El creador de esta gema es \href{http://www.armandofox.com/geek}{{\bfseries Armando Fox}}, profesor del 
+    \href{http://www.cs.berkeley.edu/}{Departamento de Ingeniería Informática y Eléctrica} de la 
+    \href{http://www.berkeley.edu/}{{\bfseries Universidad de Berkeley}}, California (EEUU).
+  \end{itemize}
   \begin{center}
     \includegraphics[width=0.2\textwidth]{img/armando.eps}
-    \hspace*{0.5cm}
+    \hspace*{0.8cm}
     \includegraphics[width=0.2\textwidth]{img/Berkeley.eps}
     \hspace*{0.5cm}
     \includegraphics[width=0.4\textwidth]{img/sassmoc.eps}
@@ -123,16 +117,25 @@ Director: Casiano Rodríguez León
     \begin{itemize}
       \item A partir de un fichero Ruby que recibe como entrada, genera un cuestionario en los formatos anteriormente descritos.
     \end{itemize}
+    
+    \begin{center}
+      \fbox{\includegraphics[width=0.65\textwidth]{img/quiz.eps}}
+    \end{center}
+    
+    \framebreak
     \item Entablé contacto con Armando comentándole lo que se pretendía hacer y
     accedió de amablemente a incorporar mis cambios a su gema original. 
-    \item Actualmente soy {\bfseries colaborador} en su repositorio. \includegraphics[width=0.1\textwidth]{img/like.eps}
+    \item Actualmente soy {\bfseries colaborador} en su repositorio.
+    \hspace*{0.8cm} 
+    \includegraphics[width=0.1\textwidth]{img/like.eps}
   \end{itemize}
 \end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
 \section{Trabajos Relacionados y Perfil de Usuario}
-\begin{frame}
+\begin{frame}[allowframebreaks]
   \frametitle{Trabajos Relacionados y Perfil de Usuario}
+  
   \begin{itemize}
     \item Existen numerosas plataformas que permiten realizar cuestionarios y calificar a los alumnos, como por ejemplo {\bfseries Moodle}.
     \begin{center}
@@ -148,6 +151,10 @@ Director: Casiano Rodríguez León
       \item Docente de alguna rama de Ingeniería.
       \item Con conocimientos avanzados de programación y administración de sistemas.
     \end{itemize}
+    
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{img/meme.eps}
+    \end{center}
   \end{itemize}
   
 \end{frame}
@@ -158,15 +165,25 @@ Director: Casiano Rodríguez León
   \frametitle{Objetivos}
   
   Los objetivos que se han propuesto a completar han sido los siguientes:
-  \begin{itemize}
-    \item Revisión biliográfica y consulta del estado del arte.
-    \item Extensión del DSL para la elaboración de cuestionarios de modo que permita:
-    \begin{itemize}
-      \item Nuevos tipos de preguntas como, por ejemplo, de código.
-      \item Generar cuestionarios autoevaluables para entrenamiento del alumnado en formato HTML.
-      \item Generar una aplicación Web autocorrectora de cuestionarios.
-    \end{itemize}
-  \end{itemize}
+  \begin{columns}
+    % First column
+    \begin{column}{9cm}
+      \begin{itemize}
+        \item Revisión biliográfica y consulta del estado del arte.
+        \item Extensión del DSL para la elaboración de cuestionarios de modo que permita:
+        \begin{itemize}
+          \item Nuevos tipos de preguntas como, por ejemplo, de código.
+          \item Generar cuestionarios autoevaluables para entrenamiento del alumnado en formato HTML.
+          \item Generar una aplicación Web autocorrectora de cuestionarios.
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    % Second column
+    \begin{column}{5cm}
+      \includegraphics[width=0.7\textwidth]{img/checklist.eps}
+    \end{column}
+  \end{columns}
+  
 \end{frame}
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
@@ -248,19 +265,36 @@ Director: Casiano Rodríguez León
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\section{Corrección de errores y mejoras de la gema original}
+\section{Resultados}
+\begin{frame}
+\frametitle{Resultados}
+  
+  \begin{center}
+    \Huge{Resultados}
+  \end{center}
+\end{frame}
+
+\subsection{Corrección de errores y mejoras de la gema original}
 \begin{frame}
 \frametitle{Corrección de errores y mejoras de la gema original}
+  \bigskip
+  \bigskip
   
   \begin{itemize}
     \item Corrección de errores de funcionamiento de la gema.
+    \item Corrección de tests.
     \item Refactorización de código.
     \item Añadido manejo de excepciones.
   \end{itemize}
+  
+  \begin{figure}
+    \hfill\includegraphics[width=0.2\textwidth]{img/tick.eps}
+  \end{figure}
+  
 \end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-\section{Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
+\subsection{Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
   
 \begin{frame}[allowframebreaks]
 \frametitle{Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
@@ -272,14 +306,14 @@ Director: Casiano Rodríguez León
     \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    \item Soporte a preguntas de completar código JavaScript.
+    \item Soporte a preguntas de completar que evalúan código JavaScript.
     \bigskip
     \begin{center}
       \includegraphics[width=0.8\textwidth]{img/fi_p.eps}
     \end{center}
     \bigskip
     
-    \item Soporta expresiones escritas en {\bfseries LaTeX} usando {\bfseries MathJax}.
+    \item Soporte a expresiones escritas en {\bfseries LaTeX} usando {\bfseries MathJax}.
     \bigskip
     \begin{center}
       \includegraphics[width=0.8\textwidth]{img/latex.eps}
@@ -317,12 +351,10 @@ Director: Casiano Rodríguez León
     \bigskip
     \begin{itemize}
       \item Mediante menú contextual:
-      \newline
       \begin{center}
         \includegraphics[width=0.5\textwidth]{img/show_answer.eps}
       \end{center}
       \item Mediante botones:
-      \newline
       \begin{center}
         \includegraphics[width=0.5\textwidth]{img/sm.eps}
       \end{center}  
@@ -332,7 +364,7 @@ Director: Casiano Rodríguez León
 \end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-\section{Aplicación correctora de exámenes: Sinatra renderer}
+\subsection{Aplicación correctora de exámenes: Sinatra renderer}
 
 \begin{frame}[allowframebreaks]
 \frametitle{Aplicación correctora de exámenes: Sinatra renderer}
@@ -343,7 +375,8 @@ Director: Casiano Rodríguez León
     \item Autenticación usando {\bfseries OAuth} con las cuentas de Gmail.
     \item Ventana temporal en la que el cuestionario estará disponible.
     \item Corrección de los cuestionarios realizados por los alumnos.
-    \item Soporta preguntas de programación (código en {\bfseries Ruby}).
+    \item Soporte a los tipos de preguntas explicados anteriormente.
+    \item Soporte a preguntas de programación (código en {\bfseries Ruby}).
     \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
@@ -378,13 +411,13 @@ Director: Casiano Rodríguez León
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     \begin{center}
-      \includegraphics[width=0.5\textwidth]{img/app5.eps}
+      \includegraphics[width=0.9\textwidth]{img/app1.eps}
     \end{center}
     \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     \begin{center}
-      \includegraphics[width=0.9\textwidth]{img/app1.eps}
+      \includegraphics[width=0.5\textwidth]{img/app5.eps}
     \end{center}
     
   \end{itemize}
@@ -394,6 +427,10 @@ Director: Casiano Rodríguez León
 \section{Conclusiones y Trabajos Futuros/Conclusions and Future Work}
 \begin{frame}[allowframebreaks]
   \frametitle{Conclusiones y Trabajos Futuros/Conclusions and Future Work}
+  
+  \begin{center}
+    \includegraphics[width=0.1\textwidth]{img/espanol.eps}
+  \end{center}
   
   \begin{itemize}
     \item Esta herramienta pretende ser un complemento para plataformas como Moodle al ofrecer la posibilidad de
@@ -406,7 +443,7 @@ Director: Casiano Rodríguez León
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-{\bf Trabajos Futuros: }
+  {\bf Trabajos Futuros:}
   \begin{itemize}
     \item Resolver los problemas de seguridad relacionados con evaluar el código escrito de los alumnos.
     \item Dar soporte a preguntas con respuestas de código en otros lenguajes de programación.
@@ -415,6 +452,10 @@ Director: Casiano Rodríguez León
   \end{itemize}
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+  \begin{center}
+    \includegraphics[width=0.1\textwidth]{img/ingles.eps}
+  \end{center}
   
   \begin{itemize}
     \item This tool intends to be a complement to learning management systems with new capabilities like the possibility to specify 
@@ -427,7 +468,7 @@ Director: Casiano Rodríguez León
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-{\bf Future Work:}
+  {\bf Future Work:}
   \begin{itemize}
     \item Solve the security problem related with the evaluation of student code in the server.
     \item Provide support to questions with answers written in other programming languages.
