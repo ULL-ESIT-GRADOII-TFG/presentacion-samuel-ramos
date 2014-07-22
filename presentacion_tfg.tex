@@ -9,9 +9,11 @@
 \newtheorem{ejemplo}{Ejemplo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[Trabajo de Fin de Grado]{SyTW: Aplicación para la elaboración y desliegue de cuestionarios}
+\title[Trabajo de Fin de Grado]{Sistemas y Tecnologías Web\\
+Aplicación para la elaboración y despliegue de cuestionarios}
 \author {
-Juan José Labrador González
+Autor: Juan José Labrador González\\
+Director: Casiano Rodríguez León
 }
 
 \institute[ULL]{Escuela Superior de Ingeniería y Tecnología \\
@@ -81,17 +83,17 @@ Juan José Labrador González
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
   \begin{itemize}
-    \item Fruto del estudio e investigación del estado del arte, se encontró un repositorio en GitHub con gema de {\bfseries Ruby} denominada 
+    \item Fruto del estudio e investigación del estado del arte, se encontró un repositorio en GitHub con una gema de {\bfseries Ruby} denominada 
     \href{http://github.com/saasbook/ruql}{'RuQL'}:
     \begin{itemize}
-      \item Ruby-based Quiz Generator and DSL.
+      \item RuQL: Ruby-based Quiz Generator and DSL.
       \item Implementaba un DSL para hacer cuestionarios en diversos formatos (\textit{renderers}):
       \begin{enumerate}
         \item \textit{edX}.
         \item \textit{AutoQCM}.
         \item \textit{HTML impreso} para completar a mano.
       \end{enumerate}
-      \item Los tipos de preguntas soportados eran: 
+      \item Los tipos de preguntas soportados por RuQL en ese momento eran: 
       \begin{itemize}
         \item De completar.
         \item De tipo test (respuesta única y multirrespuesta).
@@ -101,15 +103,17 @@ Juan José Labrador González
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-  \begin{itemize}
-    \item El creador de esta gema es \href{http://www.armandofox.com/geek}{{\bfseries Armando Fox}}, profesor del 
-    \href{http://www.cs.berkeley.edu/}{Departamento de Ingeniería Informática y Eléctrica} de la 
-    \href{http://www.berkeley.edu/}{{\bfseries Universidad de Berkeley}}, California (EEUU).
-  \end{itemize}
+      \begin{itemize}
+        \item El creador de esta gema es \href{http://www.armandofox.com/geek}{{\bfseries Armando Fox}}, profesor del 
+        \href{http://www.cs.berkeley.edu/}{Departamento de Ingeniería Informática y Eléctrica} de la 
+        \href{http://www.berkeley.edu/}{{\bfseries Universidad de Berkeley}}, California (EEUU).
+      \end{itemize}
   \begin{center}
-    \includegraphics[width=0.25\textwidth]{img/armando.eps}
-    \hspace*{1.5cm}
-    \includegraphics[width=0.25\textwidth]{img/Berkeley.eps}
+    \includegraphics[width=0.2\textwidth]{img/armando.eps}
+    \hspace*{0.5cm}
+    \includegraphics[width=0.2\textwidth]{img/Berkeley.eps}
+    \hspace*{0.5cm}
+    \includegraphics[width=0.4\textwidth]{img/sassmoc.eps}
   \end{center}
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -120,12 +124,15 @@ Juan José Labrador González
       \item A partir de un fichero Ruby que recibe como entrada, genera un cuestionario en los formatos anteriormente descritos.
     \end{itemize}
     \item Entablé contacto con Armando comentándole lo que se pretendía hacer y
-    accedió de buena manera a incorporar mis cambios a su gema original. 
+    accedió de amablemente a incorporar mis cambios a su gema original. 
     \item Actualmente soy {\bfseries colaborador} en su repositorio. \includegraphics[width=0.1\textwidth]{img/like.eps}
   \end{itemize}
-  \framebreak
+\end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
+\section{Trabajos Relacionados y Perfil de Usuario}
+\begin{frame}
+  \frametitle{Trabajos Relacionados y Perfil de Usuario}
   \begin{itemize}
     \item Existen numerosas plataformas que permiten realizar cuestionarios y calificar a los alumnos, como por ejemplo {\bfseries Moodle}.
     \begin{center}
@@ -136,7 +143,7 @@ Juan José Labrador González
     \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
     
-    \item El uso de esta herramienta está principalmente orientada a un perfil de profesor concreto:
+    \item El uso de la herramienta propuesta está principalmente orientada a un perfil de profesor concreto:
     \begin{itemize}
       \item Docente de alguna rama de Ingeniería.
       \item Con conocimientos avanzados de programación y administración de sistemas.
@@ -146,7 +153,7 @@ Juan José Labrador González
 \end{frame}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
-\subsection{Objetivos}
+\section{Objetivos}
 \begin{frame}
   \frametitle{Objetivos}
   
@@ -164,7 +171,7 @@ Juan José Labrador González
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
-\subsection{Tecnología usada}
+\section{Tecnología usada}
 \begin{frame}
   \frametitle{Tecnología usada}
   
@@ -241,24 +248,22 @@ Juan José Labrador González
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\section{Resultados}
-\begin{frame}[allowframebreaks]
-  \frametitle{Resultados}
-  
-  {\bfseries Correción de errores y mejoras de la gema original}
-  \bigskip
+\section{Corrección de errores y mejoras de la gema original}
+\begin{frame}
+\frametitle{Corrección de errores y mejoras de la gema original}
   
   \begin{itemize}
-    \item Correción de errores de funcionamiento de la gema.
+    \item Corrección de errores de funcionamiento de la gema.
     \item Refactorización de código.
     \item Añadido manejo de excepciones.
   \end{itemize}
-  \framebreak
+\end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-  {\bfseries Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
-  \bigskip
+\section{Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
   
+\begin{frame}[allowframebreaks]
+\frametitle{Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
   Se genera un fichero HTML que contiene un formulario web. Características destacadas:
   \begin{itemize}
     \item Validación por {\bfseries JavaScript}.
@@ -324,12 +329,13 @@ Juan José Labrador González
     \end{itemize}
     
   \end{itemize}
-  \framebreak
+\end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-  {\bfseries Aplicación correctora de exámenes: Sinatra renderer}
-  \bigskip
-  
+\section{Aplicación correctora de exámenes: Sinatra renderer}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Aplicación correctora de exámenes: Sinatra renderer}
   Genera una aplicación Sinatra con todo lo necesario para ser desplegada.
   Características:
   \begin{itemize}
@@ -385,9 +391,9 @@ Juan José Labrador González
 \end{frame}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
-\section{Conclusiones/Conclusions}
+\section{Conclusiones y Trabajos Futuros/Conclusions and Future Work}
 \begin{frame}[allowframebreaks]
-  \frametitle{Conclusiones/Conclusions}
+  \frametitle{Conclusiones y Trabajos Futuros/Conclusions and Future Work}
   
   \begin{itemize}
     \item Esta herramienta pretende ser un complemento para plataformas como Moodle al ofrecer la posibilidad de
@@ -400,13 +406,12 @@ Juan José Labrador González
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-  El trabajo realizado hasta la fecha puede ser el punto de partida para otro Trabajo de Fin de Grado, por lo que
-  las principales líneas de desarrollo a continuar serían:
+{\bf Trabajos Futuros: }
   \begin{itemize}
     \item Resolver los problemas de seguridad relacionados con evaluar el código escrito de los alumnos.
     \item Dar soporte a preguntas con respuestas de código en otros lenguajes de programación.
     \item Ofrecer una alternativa de despliegue distinta a Heroku.
-    \item Escribir \textit{renderers} para dar soporte a otros formatos usados por plataformas educativas (Ej: MoodleXML, Gift, etc.).
+    \item Escribir \textit{renderers} para dar soporte a otros formatos usados por diversas plataformas educativas (Ej: MoodleXML, Gift, etc.).
   \end{itemize}
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -422,8 +427,7 @@ Juan José Labrador González
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-  The tool in its current state could be the starting point for another Final Degree Project.
-  Therefore, the main develop lines to continue are the following:
+{\bf Future Work:}
   \begin{itemize}
     \item Solve the security problem related with the evaluation of student code in the server.
     \item Provide support to questions with answers written in other programming languages.
