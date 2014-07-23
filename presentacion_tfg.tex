@@ -3,6 +3,7 @@
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{latexsym}
 
 \newcommand{\beamer}{\textsc{beamer}}
 \newtheorem{definicion}{Definición}
@@ -65,15 +66,14 @@ Director: Casiano Rodríguez León
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
 \section{Introducción}
-\begin{frame}[allowframebreaks]
+\begin{frame}[allowframebreaks,fragile]
   \frametitle{Introducción}
   
   \begin{center}
     Este Trabajo de Fin de Grado consistió en la extensión de un Lenguaje de Dominio Específico ({\bfseries DSL}) que permite:
     \begin{itemize}
-       \item  La generación de cuestionarios autoevaluables para entrenamiento del alumnado 
-       \item  La generación de de aplicaciones correctoras de exámenes
-       provistas de lo necesario para su despliegue y puesta en funcionamiento.
+       \item La generación de cuestionarios autoevaluables para entrenamiento del alumnado.
+       \item La generación de aplicaciones correctoras de exámenes provistas de lo necesario para su despliegue y puesta en funcionamiento.
     \end{itemize}
   \end{center}
   \framebreak
@@ -84,11 +84,11 @@ Director: Casiano Rodríguez León
     \href{http://github.com/saasbook/ruql}{'RuQL'}:
     \begin{itemize}
       \item RuQL: Ruby-based Quiz Generator and DSL.
-      \item Implementaba un DSL para hacer cuestionarios en diversos formatos usando diversos \textit{renderers}:
+      \item Implementaba un DSL para hacer cuestionarios en diversos formatos usando distintos \textit{renderers}:
       \begin{enumerate}
         \item \textit{EdX}.
-        \item \textit{AutoQCM}.
-        \item \textit{HTML impreso} para completar a mano.
+        \item \textit{AutoQCM} - AMC (\textit{Auto Multiple Choice}).
+        \item \textit{HTML} listo para imprimir.
       \end{enumerate}
       \item Los tipos de preguntas soportados por RuQL en ese momento eran: 
       \begin{itemize}
@@ -126,6 +126,45 @@ Director: Casiano Rodríguez León
     \end{center}
     
     \framebreak
+    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    {\bfseries {\Large Funcionamiento}}
+    \bigskip
+    \bigskip
+    
+      \begin{columns}
+        % First column
+        \begin{column}{3cm}
+          \includegraphics[width=0.7\textwidth]{img/ruby_file.eps} \\
+          \hspace*{0.1cm}
+          example.rb
+        \end{column}
+        % Second column
+        \begin{column}{0.1px}
+          $\rightarrow$
+        \end{column}
+        % Third column
+        \begin{column}{4cm}
+          \hspace*{0.8cm}
+          \begin{center}
+            \includegraphics[width=0.6\textwidth]{img/terminal_icon.eps} \\
+            \textit{[\textasciitilde]\$ ruql example.rb Html5 \textgreater \,output.html}
+          \end{center}
+        \end{column}
+        % Fourth column
+        \begin{column}{0.5cm}
+          $\rightarrow$
+        \end{column}
+        % Fifth column
+        \begin{column}{3cm}
+          \includegraphics[width=0.7\textwidth]{img/file_html.eps} \\
+          output.html
+        \end{column}
+      \end{columns}
+    
+    \framebreak
+    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
     \item Entablé contacto con Armando comentándole lo que se pretendía hacer y
     accedió de amablemente a incorporar mis cambios a su gema original. 
     \item Actualmente soy {\bfseries colaborador} en su repositorio.
@@ -149,7 +188,7 @@ Director: Casiano Rodríguez León
     \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
     
-    \item El uso de la herramienta propuesta está principalmente orientada a un perfil de profesor concreto:
+    \item La herramienta propuesta está principalmente orientada hacia un perfil de profesor concreto:
     \begin{itemize}
       \item Docente de alguna rama de Ingeniería.
       \item Con conocimientos avanzados de programación y administración de sistemas.
@@ -287,7 +326,7 @@ Director: Casiano Rodríguez León
     \item Corrección de errores de funcionamiento de la gema.
     \item Corrección de tests.
     \item Refactorización de código.
-    \item Añadido manejo de excepciones.
+    \item Añadido manejo de excepciones y mejora de los mensajes de error.
   \end{itemize}
   
   \begin{figure}
@@ -301,7 +340,10 @@ Director: Casiano Rodríguez León
   
 \begin{frame}[allowframebreaks]
 \frametitle{Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
-  Se genera un fichero HTML que contiene un formulario web. Características destacadas:
+  Se genera un fichero HTML que contiene un formulario web. 
+  \bigskip
+  
+  Características destacadas:
   \begin{itemize}
     \item Validación por {\bfseries JavaScript}.
     \item {\bfseries Local Storage} de HTML5 para almacenar las respuestas introducidas.
@@ -364,6 +406,43 @@ Director: Casiano Rodríguez León
     \end{itemize}
     
   \end{itemize}
+  \framebreak
+  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+  {\bfseries {\Large Funcionamiento}}
+  \bigskip  
+  \bigskip
+  
+  \begin{columns}
+    % First column
+    \begin{column}{3cm}
+      \includegraphics[width=0.7\textwidth]{img/ruby_file.eps} \\
+      \hspace*{0.1cm}
+      example.rb
+    \end{column}
+    % Second column
+    \begin{column}{0.1px}
+      $\rightarrow$
+    \end{column}
+    % Third column
+    \begin{column}{4cm}
+      \hspace*{0.8cm}
+      \begin{center}
+        \includegraphics[width=0.6\textwidth]{img/terminal_icon.eps} \\
+        \textit{[\textasciitilde]\$ ruql example.rb HtmlForm \textgreater \quad output.html}
+      \end{center}
+    \end{column}
+    % Fourth column
+    \begin{column}{0.5cm}
+      $\rightarrow$
+    \end{column}
+    % Fifth column
+    \begin{column}{3cm}
+      \includegraphics[width=0.7\textwidth]{img/file_html.eps} \\
+      output.html
+    \end{column}
+  \end{columns}
+  
 \end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
@@ -372,6 +451,8 @@ Director: Casiano Rodríguez León
 \begin{frame}[allowframebreaks]
 \frametitle{Aplicación correctora de exámenes: Sinatra renderer}
   Genera una aplicación Sinatra con todo lo necesario para ser desplegada.
+  \bigskip
+  
   Características:
   \begin{itemize}
     \item Roles de usuarios: profesores y alumnos.
@@ -384,8 +465,77 @@ Director: Casiano Rodríguez León
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     \begin{center}
-      \includegraphics[width=0.35\textwidth]{img/tree.eps}
+      {\bfseries {\Large Funcionamiento}}
     \end{center}
+    
+    \begin{columns}
+      % First column
+      \begin{column}{3.05cm}
+        \hspace*{0.3cm}
+        \includegraphics[width=0.5\textwidth]{img/ruby_file.eps} \\
+        \hspace*{0.3cm}
+        example.rb
+        \newline
+        \newline
+        \hspace*{0.3cm}
+        \includegraphics[width=0.5\textwidth]{img/yml_file.eps} \\
+        \hspace*{0.3cm}
+        config.yml
+        \newline
+        \newline
+        \hspace*{0.3cm}
+        \includegraphics[width=0.5\textwidth]{img/csv_file.eps} \\
+        \hspace*{0.3cm}
+        students.csv
+      \end{column}
+      % Second column
+      \begin{column}{0.1px}
+        $\rightarrow$
+      \end{column}
+      % Third column
+      \begin{column}{4cm}
+        \hspace*{0.8cm}
+        \begin{center}
+          \includegraphics[width=0.6\textwidth]{img/terminal_icon.eps} \\
+          \textit{[\textasciitilde]\$ ruql example.rb Sinatra}
+        \end{center}
+      \end{column}
+      % Fourth column
+      \begin{column}{0.5cm}
+        $\rightarrow$
+      \end{column}
+      % Fifth column
+      \begin{column}{4cm}
+        \begin{center}
+          \includegraphics[width=1\textwidth]{img/tree.eps}
+        \end{center}
+      \end{column}
+    \end{columns}
+    
+    \framebreak
+    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    \begin{columns}[tc]
+      % First column
+      \begin{column}{7cm}
+        \includegraphics[width=1\textwidth]{img/yml.eps} \\
+        \hspace*{1cm}
+        config.yml
+      \end{column}
+      % Second column
+      \begin{column}{5cm}
+        \includegraphics[width=1\textwidth]{img/quiz_sinatra.eps} \\
+        \hspace*{1cm}
+        example.rb
+      \end{column}
+    \end{columns}
+    \bigskip
+    
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{img/csv.eps} \\
+      students.csv
+    \end{center}
+    
     \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
@@ -395,7 +545,7 @@ Director: Casiano Rodríguez León
       \includegraphics[width=0.9\textwidth]{img/app0.eps}
       \newline
       \newline
-      \includegraphics[width=0.5\textwidth]{img/app2.eps}
+      \includegraphics[width=0.5\textwidth]{img/app6.eps}
     \end{center}
     
     \framebreak
@@ -414,7 +564,9 @@ Director: Casiano Rodríguez León
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     \begin{center}
-      \includegraphics[width=0.9\textwidth]{img/app1.eps}
+      \includegraphics[width=0.9\textwidth]{img/app1.eps} \\
+      \bigskip
+      \includegraphics[width=0.5\textwidth]{img/app2.eps}
     \end{center}
     \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -430,10 +582,6 @@ Director: Casiano Rodríguez León
 \section{Conclusiones y Trabajos Futuros/Conclusions and Future Work}
 \begin{frame}[allowframebreaks]
   \frametitle{Conclusiones y Trabajos Futuros/Conclusions and Future Work}
-  
-  %\begin{center}
-  %  \includegraphics[width=0.1\textwidth]{img/espanol.eps}
-  %\end{center}
   
   \begin{itemize}
     \item Esta herramienta pretende ser un complemento para plataformas como Moodle al ofrecer la posibilidad de
@@ -455,10 +603,6 @@ Director: Casiano Rodríguez León
   \end{itemize}
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  
-  %\begin{center}
-  %  \includegraphics[width=0.1\textwidth]{img/ingles.eps}
-  %\end{center}
   
   \begin{itemize}
     \item This tool intends to complement learning management systems with new capabilities like the possibility to specify {\bfseries programming questions}.
@@ -487,6 +631,13 @@ Director: Casiano Rodríguez León
   \bibliographystyle{ieeetr}
   \bibliography{presentacion_tfg}
   \nocite{*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Fin de la presentación}
+  \begin{center}
+    \Huge{Gracias por su atención}
+  \end{center}
 \end{frame}
 
 \end{document}
