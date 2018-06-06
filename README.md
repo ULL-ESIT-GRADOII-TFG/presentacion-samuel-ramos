@@ -1,9 +1,8 @@
-Presentación del Trabajo de Fin de Grado (TFG)
-==============================================
+# Trabajo de Fin de Grado - Codelab
 
-Sistemas y Tecnologías Web (SyTW): Aplicación para la elaboración y despliegue de cuestionarios
------------------------------------------------------------------------------------------------
+> Autor: Samuel Ramos Barroso (alu01008165146@ull.edu.es)
 
-[Memoria del TFG](http://jjlabrador.github.io/TFG-SyTW/index.html)
+> Tutor: Casiano Rodríguez León (crguezl@ull.edu.es)
 
-[Código fuente](https://github.com/jjlabrador/ruql/tree/master)
+* [Memoria](https://github.com/ULL-ESIT-GRADOII-TFG/memoria-tfg-samuel)
+* [Código](https://github.com/ULL-ESIT-GRADOII-TFG/samuel-ramos-tfg)

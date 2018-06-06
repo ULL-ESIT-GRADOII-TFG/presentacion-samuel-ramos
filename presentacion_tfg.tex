@@ -10,27 +10,27 @@
 \newtheorem{ejemplo}{Ejemplo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[Trabajo de Fin de Grado]{Sistemas y Tecnologías Web\\
-Aplicación para la elaboración y despliegue de cuestionarios}
+\title[Trabajo de Fin de Grado]{CodeLab\\
+A Tool to automate repository creation and access control, giving support to distribute starter code, collect assignments and evaluate the students work on GitHub.}
 
-\author[Juan José Labrador González] {
-Autor: Juan José Labrador González \\
+\author[Samuel Ramos Barroso] {
+Autor: Samuel Ramos Barroso \\
 Director: Casiano Rodríguez León
 }
 
 \institute[ULL]{Escuela Superior de Ingeniería y Tecnología \\
                 Departamento de Ingeniería Informática y de Sistemas \\
                 Universidad de La Laguna}
-\date[24-07-2014]{24 de Julio de 2014}
+\date[14-06-2018]{14 de Junio de 2018}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\usetheme{Berlin}
 \usetheme{Madrid}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{pantone254}{RGB}{122,59,122}
-\definecolor{pantone3015}{RGB}{0,88,147}
-\definecolor{pantone432}{RGB}{56,61,66}
+\definecolor{pantone254}{RGB}{92,6,140}
+\definecolor{pantone3015}{RGB}{92,6,140}
+\definecolor{pantone432}{RGB}{92,6,140}
 \setbeamercolor*{palette primary}{use=structure,fg=white,bg=pantone254}
 \setbeamercolor*{palette secondary}{use=structure,fg=white,bg=pantone3015}
 \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=pantone432}
@@ -50,9 +50,8 @@ Director: Casiano Rodríguez León
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 \begin{frame}
 
-  \includegraphics[width=0.15\textwidth]{img/ullesc.eps}
+  \includegraphics[width=0.3\textwidth]{img/ull.eps}
   \hspace*{7.5cm}
-  \includegraphics[width=0.16\textwidth]{img/etsii.eps}
   \titlepage
 
 \end{frame}
@@ -70,62 +69,32 @@ Director: Casiano Rodríguez León
   \frametitle{Introducción}
   
   \begin{center}
-    Este Trabajo de Fin de Grado consistió en la extensión de un Lenguaje de Dominio Específico ({\bfseries DSL}) que permite:
-    \begin{itemize}
-       \item La generación de cuestionarios autoevaluables para entrenamiento del alumnado.
-       \item La generación de aplicaciones correctoras de exámenes provistas de lo necesario para su despliegue y puesta en funcionamiento.
-    \end{itemize}
+    CodeLab es una plataforma web basada en Javascript destinada al apoyo del profesorado para la realización de prácticas 
+    intentando resolver las limitaciones que tienen otras plataformas para la gestión de prácticas.
   \end{center}
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
   \begin{itemize}
-    \item Fruto del estudio e investigación del estado del arte, se encontró un repositorio en GitHub con una gema de {\bfseries Ruby} denominada 
-    \href{http://github.com/saasbook/ruql}{'RuQL'}:
-    \begin{itemize}
-      \item RuQL: Ruby-based Quiz Generator and DSL.
-      \item Implementaba un DSL para hacer cuestionarios en diversos formatos usando distintos \textit{renderers}:
-      \begin{enumerate}
-        \item \textit{EdX}.
-        \item \textit{AutoQCM} - AMC (\textit{Auto Multiple Choice}).
-        \item \textit{Html5}.
-      \end{enumerate}
-      \item Los tipos de preguntas soportados por RuQL en ese momento eran: 
-      \begin{itemize}
-        \item De completar.
-        \item De tipo test (respuesta única y multirrespuesta).
-      \end{itemize}
-    \end{itemize}
+    \item El profesor podrá crear tareas que serán asignadas a sus alumnos de forma individual o grupal. 
+    \item Cada alumno realizará su trabajo en un repositorio git, el cual una vez finalizado, podrá ser revisado por el profesor.
+    \item La generación de aplicaciones correctoras de exámenes provistas de lo necesario para su despliegue y puesta en funcionamiento.
   \end{itemize}
+
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-  \begin{itemize}
-    \item El creador de esta gema es \href{http://www.armandofox.com/geek}{{\bfseries Armando Fox}}, profesor del 
-    \href{http://www.cs.berkeley.edu/}{Departamento de Ingeniería Informática y Eléctrica} de la 
-    \href{http://www.berkeley.edu/}{{\bfseries Universidad de Berkeley}}, California (EEUU).
-  \end{itemize}
-  \begin{center}
-    \includegraphics[width=0.2\textwidth]{img/armando.eps}
-    \hspace*{0.8cm}
-    \includegraphics[width=0.2\textwidth]{img/Berkeley.eps}
-    \hspace*{0.5cm}
-    \includegraphics[width=0.4\textwidth]{img/sassmoc.eps}
-  \end{center}
+  En los últimos años se han desarrollado las nuevas tecnologías, lo que ha permitido que lleguen 
+  nuevas herramientas de aprendizaje y de apoyo a la docencia, Es el caso de la exitosa plataforma 
+  Moodle, un LCMS, sigla de Learning Content Management System.
+  
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
   \begin{itemize}
     \item Este DSL se consideró idóneo para comenzar con la elaboración de este TFG:
-    \begin{itemize}
-      \item A partir de un fichero Ruby que recibe como entrada, genera un cuestionario en los formatos anteriormente descritos.
-    \end{itemize}
-    
-    \begin{center}
-      \fbox{\includegraphics[width=0.65\textwidth]{img/quiz.eps}}
-    \end{center}
-    
-    \framebreak
+  \end{itemize}
+  \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     {\bfseries {\Large Funcionamiento}}
@@ -507,7 +476,6 @@ Director: Casiano Rodríguez León
       % Fifth column
       \begin{column}{4cm}
         \begin{center}
-          \includegraphics[width=0.9\textwidth]{img/tree.eps}
         \end{center}
       \end{column}
     \end{columns}
@@ -515,7 +483,7 @@ Director: Casiano Rodríguez León
     \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    \begin{columns}[tc]
+    \begin{columns}
       % First column
       \begin{column}{7cm}
         \includegraphics[width=1\textwidth]{img/yml.eps} \\
