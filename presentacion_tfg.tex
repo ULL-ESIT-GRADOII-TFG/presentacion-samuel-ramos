@@ -85,160 +85,76 @@ Director: Casiano Rodríguez León
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
   En los últimos años se han desarrollado las nuevas tecnologías, lo que ha permitido que lleguen 
-  nuevas herramientas de aprendizaje y de apoyo a la docencia, Es el caso de la exitosa plataforma 
+  nuevas herramientas de aprendizaje y de apoyo a la docencia. Es el caso de la exitosa plataforma 
   Moodle, un LCMS, sigla de Learning Content Management System.
   
   \framebreak
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
+  La única herramienta para la gestión de tareas está desarrollada por Github, se trata de Github Classroom, 
+  que forma parte de Github Education:
+  
   \begin{itemize}
-    \item Este DSL se consideró idóneo para comenzar con la elaboración de este TFG:
+    \item GitHub Classroom
+    \item Classroom Desktop
+    \item Teachers Pet
+    \item Student Pack
   \end{itemize}
+
+  \framebreak
+    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    Classroom simplifica la asignación de tareas, automatizando la creación de repositorios, 
+    es una herramienta útil y sencilla de usar, tanto para profesores como para alumnos, 
+    pero tiene ciertos defectos:
+
+    \begin{itemize}
+      \item No se puede crear un repositorio de evaluación que contenga las tareas de todos los alumnos
+      \item Tampoco se puede acceder a los enlaces de travis, si la práctica requiere su uso
+      \item Tiene un sistema para asociar información a cada alumno que es bastante complejo de usar
+    \end{itemize}
+
   \framebreak
     %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    {\bfseries {\Large Funcionamiento}}
-    \bigskip
-    \bigskip
-    
-      \begin{columns}
-        % First column
-        \begin{column}{3cm}
-          \includegraphics[width=0.7\textwidth]{img/ruby_file.eps} \\
-          \hspace*{0.1cm}
-          example.rb
-        \end{column}
-        % Second column
-        \begin{column}{0.1px}
-          $\rightarrow$
-        \end{column}
-        % Third column
-        \begin{column}{4cm}
-          \hspace*{0.8cm}
-          \begin{center}
-            \includegraphics[width=0.6\textwidth]{img/terminal_icon.eps} \\
-          \end{center}
-          \tiny{\textit{[\textasciitilde]\$ ruql example.rb Html5 \textgreater \,output.html}}
-        \end{column}
-        % Fourth column
-        \begin{column}{0.5cm}
-          $\rightarrow$
-        \end{column}
-        % Fifth column
-        \begin{column}{3cm}
-          \includegraphics[width=0.7\textwidth]{img/file_html.eps} \\
-          output.html
-        \end{column}
-      \end{columns}
-    
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \item Entablé contacto con Armando comentándole lo que se pretendía hacer y
-    accedió de amablemente a incorporar mis cambios a su gema original. 
-    \item Actualmente soy {\bfseries colaborador} en su repositorio.
-    \hspace*{0.8cm} 
-    \includegraphics[width=0.1\textwidth]{img/like.eps}
-  \end{itemize}
 \end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  
-\section{Trabajos Relacionados y Perfil de Usuario}
-\begin{frame}[allowframebreaks]
-  \frametitle{Trabajos Relacionados y Perfil de Usuario}
+
+\section{Objetivos}
+\begin{frame}[allowframebreaks,fragile]
+  \frametitle{Objetivos}
   
   \begin{itemize}
-    \item Existen numerosas plataformas que permiten realizar cuestionarios y calificar a los alumnos, como por ejemplo {\bfseries Moodle}.
-    \begin{center}
-      \includegraphics[width=0.35\textwidth]{img/moodle.eps}
-    \end{center}
-    Sin embargo, no cuenta con la posibilidad de añadir preguntas propias de las ramas de \textit{Ingeniería}, como pueden ser aquellas
-    cuyas respuestas son evaluadas por programas escritos por el profesor.
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-    
-    \item La herramienta propuesta está principalmente orientada hacia un perfil de profesor concreto:
-    \begin{itemize}
-      \item Docente de alguna rama de Ingeniería.
-      \item Con conocimientos avanzados de programación y administración de sistemas.
-    \end{itemize}
-    
-    \begin{center}
-      \includegraphics[width=0.5\textwidth]{img/meme.eps}
-    \end{center}
+    \item Analizar otras plataformas  web existentes para la gestión del código de las prácticas de informática y su metodología de trabajo.
+    \item Estudiar el funcionamiento de otras plataformas  web existentes para la gestión del código de las prácticas de informática.
+    \item Estudiar las tecnologías a usar y enfocar el diseño de la plataforma web.
+    \item Estudiar las funcionalidades que se van a incluir en la plataforma web.
+  \end{itemize}
+
+  \framebreak
+
+  \begin{itemize}
+    \item Crear una aplicación web básica que permita al usuario iniciar sesión con su cuenta de Github.
+    \item Continuar con el desarrollo de la aplicación incluyendo las funcionalidades que solucionen las dificultades de otras plataformas  web existentes para la gestión del código de las prácticas de informática.
+    \item Diseñar y desarrollar los estilos de las vistas.
   \end{itemize}
   
 \end{frame}
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
-
-\section{Objetivos}
-\begin{frame}
-  \frametitle{Objetivos}
-  
-  Los objetivos que se han propuesto a completar han sido los siguientes:
-  \begin{columns}
-    % First column
-    \begin{column}{9cm}
-      \begin{itemize}
-        \item Revisión biliográfica y consulta del estado del arte.
-        \item Extensión del DSL para la elaboración de cuestionarios de modo que permita:
-        \begin{itemize}
-          \item Nuevos tipos de preguntas como, por ejemplo, de código.
-          \item Generar cuestionarios autoevaluables para entrenamiento del alumnado en formato HTML.
-          \item Generar una aplicación Web autocorrectora de cuestionarios.
-        \end{itemize}
-      \end{itemize}
-    \end{column}
-    % Second column
-    \begin{column}{5cm}
-      \includegraphics[width=0.7\textwidth]{img/checklist.eps}
-    \end{column}
-  \end{columns}
-  
-\end{frame}
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
-\section{Tecnología usada}
+\section{Tecnologías usadas}
 \begin{frame}
   \frametitle{Tecnología usada}
   
-  \includegraphics[width=0.1\textwidth]{img/ruby.eps}
-  \hspace*{1.2cm}
-  \includegraphics[width=0.13\textwidth]{img/HTML5.eps}
-  \hspace*{1.2cm}
-  \includegraphics[width=0.1\textwidth]{img/css3.eps}
-  \hspace*{1.2cm}
-  \includegraphics[width=0.1\textwidth]{img/js.eps}
-  \hspace*{1.2cm}
-  \includegraphics[width=0.13\textwidth]{img/bootstrap.eps}
-  \newline
-  \newline
-  \includegraphics[width=0.25\textwidth]{img/jquery.eps}
-  \hspace*{1.2cm}
-  \includegraphics[width=0.25\textwidth]{img/xregexp.eps}
-  \hspace*{1.2cm}
-  \includegraphics[width=0.25\textwidth]{img/mathjax.eps}
-  \newline
-  \newline
-  \includegraphics[width=0.15\textwidth]{img/codemirror.eps}
-  \hspace*{1.2cm}
-  \includegraphics[width=0.15\textwidth]{img/mocha.eps}
-  \hspace*{1.2cm}
-  \includegraphics[width=0.15\textwidth]{img/chai.eps}
-  \hspace*{1.2cm}
-  \includegraphics[width=0.15\textwidth]{img/karma.eps}
-  \newline
-  \newline
-  \includegraphics[width=0.15\textwidth]{img/sinatra.eps}
-  \hspace*{1.0cm}
-  \includegraphics[width=0.15\textwidth]{img/github.eps}
-  \hspace*{1.0cm}
-  \includegraphics[width=0.12\textwidth]{img/heroku.eps}
-  \hspace*{1.0cm}
-  \includegraphics[width=0.12\textwidth]{img/oauth.eps}
-  \hspace*{1.0cm}
-  \includegraphics[width=0.13\textwidth]{img/google_drive.eps}
+  Se escogió Express.js, Node.js y Javascript como tecnologías principales a usar en este proyecto 
+  por las siguientes razones:
+
+  \begin{itemize}
+    \item Express.js es bastante fácil de aprender y usar.
+    \item Se usa JS tanto en Backend como en frontend, ahorrando tiempo de desarrollo.
+    \item El gestor de paquetes NPM.
+  \end{itemize}
+
 \end{frame}
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
