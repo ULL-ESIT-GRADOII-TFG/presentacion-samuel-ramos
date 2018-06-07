@@ -143,7 +143,7 @@ Director: Casiano Rodríguez León
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
 \section{Tecnologías usadas}
-\begin{frame}
+\begin{frame}[allowframebreaks,fragile]
   \frametitle{Tecnología usada}
   
   Se escogió Express.js, Node.js y Javascript como tecnologías principales a usar en este proyecto 
@@ -155,320 +155,200 @@ Director: Casiano Rodríguez León
     \item El gestor de paquetes NPM.
   \end{itemize}
 
-\end{frame}
+  \framebreak
 
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
+  Otras tecnologías usadas:
 
-\section{Metodología de desarrollo}
-\begin{frame}
-  \frametitle{Metodología de desarrollo}
-  
-  Metodología {\bfseries ágil}:
   \begin{itemize}
-    \item Reuniones semanales estableciendo iteraciones cortas.
-    \item Desarrollo, testing y presentación de resultados y prototipos cada semana.
-    \item Solución de problemas e incorporación de nuevas características. 
+    \item Github API
+    \item MongoDB - Mongoose
+    \item El gestor de paquetes NPM.
+    \item Pug.js
+    \item Materialize
   \end{itemize}
-  \bigskip
-  
-  {\bfseries GitHub}:
-  \begin{columns}
-    % First column
-    \begin{column}{9cm}
-      \begin{itemize}
-        \item Control de versiones usando \textit{branching}.
-        \item Gestión de incidencias y mejoras usando \textit{issues}.
-        \item Contacto con Armando para los \textit{Pull Requests}.
-      \end{itemize}
-    \end{column}
-    % Second column
-    \begin{column}{4cm}
-      \begin{figure}
-        \includegraphics[width=0.7\textwidth]{img/octocat.eps}
-      \end{figure}
-    \end{column}
-  \end{columns}
+
 \end{frame}
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\section{Resultados}
+\section{Desarrollo de la plataforma}
 \begin{frame}
-\frametitle{Resultados}
+\frametitle{Desarrollo de la plataforma}
   
   \begin{center}
-    \Huge{Resultados}
+    \includegraphics[width=0.8\textwidth]{img/codelab.eps}
   \end{center}
+
 \end{frame}
 
-\subsection{Corrección de errores y mejoras de la gema original}
+\subsection{Github API}
 \begin{frame}
-\frametitle{Corrección de errores y mejoras de la gema original}
-  \bigskip
-  \bigskip
+\frametitle{Github API}
   
+  Para poder usar Github como estructura para la creación de aulas y tareas de código usaremos 
+  la Github REST API V3. La API permite acceder a las funcionalidades de Github, 
+  A continuación se detallará que funcionalidades de la Github API se han usado
+
   \begin{itemize}
-    \item Corrección de errores de funcionamiento de la gema.
-    \item Corrección de tests.
-    \item Refactorización de código.
-    \item Añadido manejo de excepciones y mejora de los mensajes de error.
+    \item OAuth
+    \item Organizaciones, repositorios y equipos.
   \end{itemize}
-  
-  \begin{figure}
-    \hfill\includegraphics[width=0.2\textwidth]{img/tick.eps}
-  \end{figure}
   
 \end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-\subsection{Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
+\subsubsection{OAuth}
   
-\begin{frame}[allowframebreaks]
-\frametitle{Cuestionarios de entrenamiento para alumnos: HtmlForm renderer}
-  Se genera un fichero HTML que contiene un formulario web. 
-  \bigskip
-  
-  Características destacadas:
-  \begin{itemize}
-    \item Validación por {\bfseries JavaScript}.
-    \item {\bfseries Local Storage} de HTML5 para almacenar las respuestas introducidas.
-    \item Expresiones regulares más potentes usando \includegraphics[width=0.23\textwidth]{img/xregexp.eps}
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \item Soporte a preguntas de completar que evalúan código JavaScript.
-    \bigskip
-    \begin{center}
-      \includegraphics[width=0.8\textwidth]{img/fi_p.eps}
-    \end{center}
-    \bigskip
-    
-    \item Soporte a expresiones escritas en {\bfseries LaTeX} usando {\bfseries MathJax}.
-    \bigskip
-    \begin{center}
-      \includegraphics[width=0.8\textwidth]{img/latex.eps}
-    \end{center}
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \item Soporte a preguntas de programación (código JavaScript).
-    \bigskip
-    \begin{center}
-      \includegraphics[width=0.9\textwidth]{img/programming.eps}
-    \end{center}
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \item Soporte a preguntas de Drag and Drop.
-    \bigskip
-    \begin{columns}
-      % First column
-      \begin{column}{7cm}
-        \includegraphics[width=0.9\textwidth]{img/ddfi.eps}
-        \newline
-        \newline
-        \includegraphics[width=0.9\textwidth]{img/ddmc.eps}
-      \end{column}
-      % Second column
-      \begin{column}{5.5cm}
-        \includegraphics[width=1\textwidth]{img/ddsm.eps}
-      \end{column}
-    \end{columns}
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \item Posibilidad de mostrar las respuestas correctas
-    \bigskip
-    \begin{itemize}
-      \item Mediante menú contextual:
-      \begin{center}
-        \includegraphics[width=0.5\textwidth]{img/show_answer.eps}
-      \end{center}
-      \item Mediante botones:
-      \begin{center}
-        \includegraphics[width=0.5\textwidth]{img/sm.eps}
-      \end{center}  
-    \end{itemize}
-    
-  \end{itemize}
-  \framebreak
-  %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  
-  {\bfseries {\Large Funcionamiento}}
-  \bigskip  
-  \bigskip
-  
-  \begin{columns}
-    % First column
-    \begin{column}{3cm}
-      \includegraphics[width=0.7\textwidth]{img/ruby_file.eps} \\
-      \hspace*{0.1cm}
-      example.rb
-    \end{column}
-    % Second column
-    \begin{column}{0.1px}
-      $\rightarrow$
-    \end{column}
-    % Third column
-    \begin{column}{5cm}
-      \hspace*{0.8cm}
-      \begin{center}
-        \includegraphics[width=0.55\textwidth]{img/terminal_icon.eps} \\
-        \tiny{\textit{[\textasciitilde]\$ ruql example.rb HtmlForm \textgreater \,output.html}}
-      \end{center}
-    \end{column}
-    % Fourth column
-    \begin{column}{0.5cm}
-      $\rightarrow$
-    \end{column}
-    % Fifth column
-    \begin{column}{3cm}
-      \includegraphics[width=0.7\textwidth]{img/file_html.eps} \\
-      output.html
-    \end{column}
-  \end{columns}
+\begin{frame}
+\frametitle{OAuth}
+
+  Desde el punto de vista de Codelab, OAuth proporciona un método de acceso a los datos de Github 
+  a la vez que se protegen los credenciales de la cuenta. Solicitamos al usuario una serie de 
+  accesos y permisos en sus datos, para poder operar con las organizaciones y repositorios de Github.
   
 \end{frame}
   %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-\subsection{Aplicación correctora de exámenes: Sinatra renderer}
+\subsubsection{Organizaciones repositorios y equipos}
+
+\begin{frame}
+\frametitle{Organizaciones repositorios y equipos}
+
+  Las operaciones que realizaremos con Organizaciones, repositorios y equipos son las siquientes:
+
+  \begin{itemize}
+    \item Obtener las organizaciones del usuario.
+    \item Añadir usuarios a la organización.
+    \item Crear un repositorio en las organizaciones.
+    \item Añadir colaboradores al repositorio.
+    \item Crear equipos.
+    \item Añadir un equipo a un repositorio.
+    \item Comprobar si un usuario es miembro de un equipo.
+    \item Obtener los repositorios de una organización.
+    \item Crear un fichero en un repositorio.
+  \end{itemize}
+
+\end{frame}
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
+  
+\subsection{MVC}
+
+\begin{frame}
+\frametitle{MVC}
+
+  El modelo vista controlador es una arquitectura de software que separa la lógica de
+  la aplicación de la interfaz de usuario. Lo hace separando la aplicación en tres partes: 
+  el modelo, la vista y el controlador.
+
+\end{frame}
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\subsection{Diseño de la base de datos}
 
 \begin{frame}[allowframebreaks]
-\frametitle{Aplicación correctora de exámenes: Sinatra renderer}
-  Genera una aplicación Sinatra con todo lo necesario para ser desplegada.
+\frametitle{Diseño de la base de datos}
+
+  Se usará una base de datos NoSQL, en concreto MongoDB como sistema gestor y Mongoose como ODM, 
+  por lo que nos referimos las tablas como colecciones, columnas como claves y filas como objeto.
+  
   \bigskip
   
-  Características:
-  \begin{itemize}
-    \item Roles de usuarios: profesores y alumnos.
-    \item Autenticación usando {\bfseries OAuth} con las cuentas de Gmail.
-    \item Ventana temporal en la que el cuestionario estará disponible.
-    \item Corrección de los cuestionarios realizados por los alumnos.
-    \item Soporte a los tipos de preguntas explicados anteriormente.
-    \item Soporte a preguntas de programación (código en {\bfseries Ruby}).
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \begin{center}
-      {\bfseries {\Large Funcionamiento}}
-    \end{center}
-    
-    \begin{columns}
-      % First column
-      \begin{column}{3.05cm}
-        \hspace*{0.3cm}
-        \includegraphics[width=0.5\textwidth]{img/ruby_file.eps} \\
-        \hspace*{0.3cm}
-        example.rb
-        \newline
-        \newline
-        \hspace*{0.3cm}
-        \includegraphics[width=0.5\textwidth]{img/yml_file.eps} \\
-        \hspace*{0.3cm}
-        config.yml
-        \newline
-        \newline
-        \hspace*{0.3cm}
-        \includegraphics[width=0.5\textwidth]{img/csv_file.eps} \\
-        \hspace*{0.3cm}
-        students.csv
-      \end{column}
-      % Second column
-      \begin{column}{0.1px}
-        $\rightarrow$
-      \end{column}
-      % Third column
-      \begin{column}{4cm}
-        \hspace*{0.8cm}
-        \begin{center}
-          \includegraphics[width=0.6\textwidth]{img/terminal_icon.eps} \\
-          \tiny{\textit{[\textasciitilde]\$ ruql example.rb Sinatra}}
-        \end{center}
-      \end{column}
-      % Fourth column
-      \begin{column}{0.5cm}
-        $\rightarrow$
-      \end{column}
-      % Fifth column
-      \begin{column}{4cm}
-        \begin{center}
-        \end{center}
-      \end{column}
-    \end{columns}
-    
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \begin{columns}
-      % First column
-      \begin{column}{7cm}
-        \includegraphics[width=1\textwidth]{img/yml.eps} \\
-        \hspace*{1cm}
-        config.yml
-      \end{column}
-      % Second column
-      \begin{column}{5cm}
-        \includegraphics[width=1\textwidth]{img/quiz_sinatra.eps} \\
-        \hspace*{1cm}
-        example.rb
-      \end{column}
-    \end{columns}
-    \bigskip
-    
-    \begin{center}
-      \includegraphics[width=0.7\textwidth]{img/csv.eps} \\
-      students.csv
-    \end{center}
-    
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \item Almacenamiento del cuestionario, respuestas y notas de los alumnos en {\bfseries Google Drive}.
-    \bigskip
-    \begin{center}
-      \includegraphics[width=0.9\textwidth]{img/app0.eps}
-      \newline
-      \newline
-      \includegraphics[width=0.5\textwidth]{img/app6.eps}
-    \end{center}
-    
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \begin{center}
-      \includegraphics[width=0.8\textwidth]{img/app3.eps}
-    \end{center}
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \begin{center}
-      \includegraphics[width=0.6\textwidth]{img/app4.eps}
-    \end{center}
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \begin{center}
-      \includegraphics[width=0.9\textwidth]{img/app1.eps} \\
-      \bigskip
-      \begin{columns}
-        \begin{column}{4cm}
-          \includegraphics[width=1.2\textwidth]{img/app2.eps}
-        \end{column}
-        \begin{column}{4cm}
-          \includegraphics[width=1.1\textwidth]{img/app7.eps}
-        \end{column}
-      \end{columns}
-    \end{center}
-    \framebreak
-    %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
-    \begin{center}
-      \includegraphics[width=0.5\textwidth]{img/app5.eps}
-    \end{center}
-    
-  \end{itemize}
+  La base de datos es una parte muy importante de la plataforma, ya que en ella recae toda 
+  la responsabilidad de simular toda la estructura de aulas y tareas.
+
+  \framebreak
+
+    Las colecciones son las siguientes:
+
+    \begin{itemize}
+      \item Usuarios
+      \item Organizaciones
+      \item Asignaciones
+      \item Asignaciones en grupo
+      \item Asignaciones individuales
+      \item Equipos
+      \item Alumnos
+    \end{itemize}
+
 \end{frame}
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\section{Funcionalidades}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Funcionalidades}
+
+  El proyecto se divide en tres paquetes de funcionalidades, Cada paquete incluye funcionalidades para cada rol:
+
+  \begin{itemize}
+    \item Funcionalidades básicas
+    \item Funcionalidades para profesores.
+    \item Funcionalidades para el alumno
+  \end{itemize}
+
+  \framebreak
+  
+  Las funcionalidades básicas son comunes a todos los roles que participan en la plataforma, 
+  tanto alumnos como profesores, todos pueden hacer Log in, Log out y consultar un perfil.
+  
+  \bigskip
+  
+  Como alumno el usuario puede visitar el perfil, donde encontrará información básica de Github y dos pestañas, 
+  en las que el alumno tiene un historial de las tareas que ha realizado de forma grupal e individual.
+  
+  \bigskip
+
+  Los profesores tendrán el grupo de funcionalidades más completo, ya que ellos son los protagonistas 
+  de la app.
+
+  \framebreak
+
+  Los profesores podrán desempeñar las siguientes tareas:
+
+  \begin{itemize}
+    \item Añadir una organización como aula.
+    \item Invitar alumnos al aula.
+    \item Crear una tarea.
+    \item Añadir un fichero de alumnos asociado al aula.
+    \item Editar las opciones del aula.
+    \item Invitar alumnos a la tarea.
+    \item Editar las opciones de la tarea.
+    \item Crear un repositorio de evaluación de cada tarea.
+  \end{itemize}
+
+\end{frame}
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+\subsection{Caso de uso}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Caso de uso}
+
+  Con vistas a probar y testear que todo funcionaba de forma correcta, Casiano me sugirió probar 
+  la plataforma para la realización de algunas prácticas individuales y grupales. Por ello, decidimos 
+  realizar algunas tareas para la asignatura de Procesadores de Lenguajes en CodeLab.
+
+  \framebreak
+
+  \begin{figure}[!htb]
+    \minipage{0.32\textwidth}
+      \includegraphics[width=\linewidth]{img/gh.eps}
+    \endminipage\hfill
+    \minipage{0.32\textwidth}
+      \includegraphics[width=\linewidth]{img/teams.eps}
+    \endminipage\hfill
+    \minipage{0.32\textwidth}%
+      \includegraphics[width=\linewidth]{img/campus.eps}
+    \endminipage
+  \end{figure}
+
+\end{frame}
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 \section{Conclusiones y Trabajos Futuros/Conclusions and Future Work}
 \begin{frame}[allowframebreaks]
